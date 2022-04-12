@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding: 0;
@@ -9,6 +10,7 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     background-color: #c7cdd3;
 }
@@ -33,7 +35,15 @@ body{
     align-items: center;
     border-radius: 20px;
     box-shadow: 10px 10px 10px rgba(0,0,0, 0.45);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+
+.icon{
+    /* width:80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px; */
 }
 
 .flip{
@@ -83,4 +93,28 @@ body{
     display:grid;
     grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
     gap: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .game-board{
+        max-width: 400px;
+
+        grid-template: 1fr 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    
+    }
+
+    .card{
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon{
+        width: 40px;
+    }
+
+    .card_front,.card_back{
+        border-radius:10px;
+
+    }
 }
